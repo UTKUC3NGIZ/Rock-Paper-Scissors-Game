@@ -39,7 +39,51 @@ body {
   }
 }
 
-section {
+.game {
+  display: flex;
+  justify-content: center;
+  margin-top: 140px;
+  &__boxDiv {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  &__box {
+    position: absolute;
+    padding: 22px;
+    border-radius: 50%;
+    &:nth-child(1) {
+      left: -70px;
+      top: -80px;
+      background: linear-gradient(180deg, $Paper);
+      box-shadow: 1px 9px 0px 0px #2945C2;
+    }
+    &:nth-child(2) {
+      right: -70px;
+      top: -80px;
+      background: linear-gradient(180deg, $Scissors);
+      box-shadow: 1px 9px 0px 0px #C76C1D;
+    }
+    &:nth-child(3) {
+      background: linear-gradient(180deg, $Rock);
+      box-shadow: 1px 9px 0px 0px #9F1532;
+      bottom: -50px;
+    }
+    &:nth-child(4) {
+    }
+  }
+  &__boxInner {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    background-color: white;
+    box-shadow: 1px -6px 0px 0px #BABED2;
+    border-radius: 50%;
+    padding: 40px;
+  }
+  &__background {
+  }
 }
 
 .footer {
