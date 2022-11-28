@@ -23,7 +23,7 @@ body {
     flex-direction: column;
     text-align: center;
     background-color: white;
-    padding: .9rem 3rem 0.5rem 3rem;
+    padding: 0.9rem 3rem 0.5rem 3rem;
     border-radius: 0.8rem;
 
     span {
@@ -41,54 +41,87 @@ body {
   }
 }
 
-.game {
+.main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   margin-top: 140px;
-  &__boxDiv {
-    position: relative;
+
+  .picked {
+    display: none;
+    justify-content: center;
+  }
+  .game {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-  }
-  &__box {
-    position: absolute;
-    padding: 22px;
-    padding-top: 30px;
-    border-radius: 50%;
-    &:nth-child(1) {
-      left: -70px;
-      top: -80px;
-      background: linear-gradient(180deg, $Paper);
-      box-shadow: 1px 9px 0px 0px #2945c2;
+    &__boxDiv {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
     }
-    &:nth-child(2) {
-      right: -70px;
-      top: -80px;
-      background: linear-gradient(180deg, $Scissors);
-      box-shadow: 1px 9px 0px 0px #c76c1d;
+    &__box {
+      position: absolute;
+      padding: 22px;
+      padding-top: 30px;
+      border-radius: 50%;
+      &:nth-child(1) {
+        left: -70px;
+        top: -80px;
+        background: linear-gradient(180deg, $Paper);
+        box-shadow: 1px 9px 0px 0px #2945c2;
+      }
+      &:nth-child(2) {
+        right: -70px;
+        top: -80px;
+        background: linear-gradient(180deg, $Scissors);
+        box-shadow: 1px 9px 0px 0px #c76c1d;
+      }
+      &:nth-child(3) {
+        background: linear-gradient(180deg, $Rock);
+        box-shadow: 1px 9px 0px 0px #9f1532;
+        bottom: -50px;
+      }
+      &:nth-child(5) {
+        display: none;
+        background: linear-gradient(180deg, $Rock);
+        box-shadow: 1px 9px 0px 0px #9f1532;
+        bottom: -50px;
+        position: static;
+      }
     }
-    &:nth-child(3) {
-      background: linear-gradient(180deg, $Rock);
-      box-shadow: 1px 9px 0px 0px #9f1532;
-      bottom: -50px;
+    &__boxInner {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      background-color: white;
+      box-shadow: 1px -6px 0px 0px #babed2;
+      border-radius: 50%;
+      padding: 40px;
     }
-    &:nth-child(4) {
+    &__conclusion{
+display: none;
+margin: 0 10rem;
+flex-direction: column;
+h2{
+font-size: 3.5rem;
+color: white;
+}
+button{
+color: red;
+background-color: white;
+padding: .9rem 0rem;
+border-radius: .4rem;
+font-size: 1rem;
+font-weight: 700;
+letter-spacing: 3px;
+}
     }
-  }
-  &__boxInner {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    background-color: white;
-    box-shadow: 1px -6px 0px 0px #babed2;
-    border-radius: 50%;
-    padding: 40px;
-  }
-  &__background {
+    &__background {
+    }
+
+
   }
 }
-
 .footer {
   text-align: end;
   margin-top: 60px;
@@ -100,7 +133,7 @@ body {
     border: 1px solid white;
     border-radius: 0.4rem;
     letter-spacing: 4px;
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 400;
   }
 }
