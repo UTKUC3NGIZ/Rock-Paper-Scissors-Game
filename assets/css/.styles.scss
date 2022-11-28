@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600;700&display=swap");
 
 // colors
 
@@ -19,3 +19,9 @@ $Dark: hsl(229, 25%, 31%);
 $Score: hsl(229, 64%, 46%);
 
 $Header: hsl(217, 16%, 45%);
+
+// Font
+body,
+button {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
